@@ -1,0 +1,39 @@
+coche1 = Coche("Ford", "Mustang", "rojo")
+coche2 = Coche("Toyota", "Prius", "verde")
+coche1.arrancar()
+coche2.parar()
+
+circulo1 = Circulo(5)
+circulo2 = Circulo(10)
+print(circulo1.area())
+print(circulo2.perimetro())
+
+
+
+
+
+
+
+class Coche:
+    def __init__(self, marca, modelo, color):
+        self.marca = marca
+        self.modelo = modelo
+        self.color = color
+
+    def arrancar(self):
+        print(f"El coche {self.marca} {self.modelo} de color {self.color} está arrancando.")
+
+    def parar(self):
+        print(f"El coche {self.marca} {self.modelo} de color {self.color} está parando.")
+
+class Circulo:
+    pi = 3.1416
+
+    def __init__(self, radio):
+        self.radio = radio
+
+    def area(self):
+        return Circulo.pi * self.radio ** 2
+
+    def perimetro(self):
+        return 2 * Circulo.pi * self.radio
